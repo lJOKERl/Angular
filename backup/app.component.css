@@ -1,0 +1,62 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: forestgreen;
+    height: 56px;
+    min-height: 56px;
+    padding: 0;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.24);
+    color: white;
+}
+
+header img {
+    width: 50px;
+}
+
+header h1 {
+    margin: 0 0 0 10px;
+    font-weight: 400;
+}
+
+main {
+    height: calc(100% - 56px);
+    display: flex;
+    padding: 2rem;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 600px;
+    margin: auto;
+}
+
+.todo-form,
+.todo-list {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    border-radius: 2px;
+    width: 100%;
+    margin-bottom: 1em;
+    background-color: white;
+}
+
+/* Todo form */
+.todo-form {
+    padding: 1em;
+    display: flex;
+}
+
+.todo-form input {
+    flex: 1;
+}
+
+.todo-form input:focus {
+    border: 1px solid #1976D2;
+}
+
+.todo-form input:focus.ng-invalid.ng-dirty {
+    border: 1px solid #dd0031;
+}
+
+.todo-form button {
+    margin-left: 16px;
+}
