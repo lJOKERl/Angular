@@ -7,7 +7,7 @@ class Todo {
 let todos: Todo[] = [
   {
     title: 'Изучить JavaScript',
-    completed: false
+    completed: true
   },
   {
     title: 'Вспомнить JQuery',
@@ -30,4 +30,23 @@ let todos: Todo[] = [
 export class AppComponent {
   title = 'Список';
   todos: Todo[] = todos;
+  newTodoTitle: string = "";
+
+  create() {
+    let todo: Todo = new Todo(this.newTodoTitle, false);
+    this.todos.push(todo);
+    this.newTodoTitle = "";
+  }
+
+  toggle(todo: Todo) {
+    todo.completed = !todo.completed;
+  }
+
+  delete(todo: Todo) {
+    let index = this.todos.indexOf(todo);
+
+    if(index > -1) {
+      this.todos.splice(index, 1);
+    }
+  }
 }
